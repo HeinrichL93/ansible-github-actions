@@ -42,3 +42,5 @@ LABEL com.github.actions.color="purple"
 RUN apt-get update -y && apt-get install -y git-core
 
 COPY . /
+RUN chmod 775 entrypoint.sh
+ENTRYPOINT [ "entrypoint.sh" ]
